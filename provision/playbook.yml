@@ -10,6 +10,7 @@
 
     - epel
     - core_tools
+    - firewalld
     - postgresql
     - sr-dispersal
     - nginx

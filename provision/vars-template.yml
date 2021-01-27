@@ -5,3 +5,7 @@ DB_USERNAME: changeme
 DB_PASSWORD: changeme
 ALLOWED_HOSTS: "example.com 127.0.0.1"
 SECRET_KEY: changeme
+
+# Firewalld config.
+FIREWALLD_ALLOWED_SERVICES: [http, https]
+FIREWALLD_ALLOWED_PORTS: []
