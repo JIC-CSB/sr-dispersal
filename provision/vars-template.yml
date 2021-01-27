@@ -7,5 +7,4 @@ ALLOWED_HOSTS: "example.com 127.0.0.1"
 SECRET_KEY: changeme
 
 # Firewalld config.
-FIREWALLD_ALLOWED_SERVICES: [http, https]
-FIREWALLD_ALLOWED_PORTS: []
+FIREWALLD_EXTRA_PORT: "9100/tcp"

@@ -11,18 +11,23 @@
     enabled: yes
     state: started
 
-- name: enable and persist firewalld allowed services
+- name: enable and persist http allowed services
   firewalld:
-    service: "{{ item }}"
+    service: http
     permanent: yes
     state: enabled
     immediate: yes
-  loop: "{{ FIREWALLD_ALLOWED_SERVICES }}"
 
-- name: enable and persist extra ports
+- name: enable and persist https allowed services
   firewalld:
-    port: "{{ item }}"
+    service: https
     permanent: yes
     state: enabled
     immediate: yes
-  loop: "{{ FIREWALLD_ALLOWED_PORTS }}"
+
+- name: enable and persist extra port
+  firewalld:
+    port: "{{ FIREWALLD_EXTRA_PORT }}"
+    permanent: yes
+    state: enabled
+    immediate: yes
